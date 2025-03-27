@@ -40,5 +40,39 @@ namespace lab4_oligaw
                 }
             }
         }
+
+        //odwroc kolory
+        private void buttonInv_Click(object sender, EventArgs e)
+        {
+            Bitmap originalImage = new Bitmap(pictureBox1.Image);
+            Bitmap invertedImage = InvertColors(originalImage);
+            pictureBox1.Image = invertedImage;
+
+        }
+
+
+        public Bitmap InvertColors(Bitmap originalImage)
+        {
+            Bitmap invertedImage = new Bitmap(originalImage);
+
+            for (int x = 0; x < invertedImage.Width; x++)
+            {
+                for (int y = 0; y < invertedImage.Height; y++)
+                {
+                    Color pixelColor = invertedImage.GetPixel(x, y);
+
+                    Color invertedColor = Color.FromArgb(
+                        255 - pixelColor.R,
+                        255 - pixelColor.G,
+                        255 - pixelColor.B
+                    );
+
+                    invertedImage.SetPixel(x, y, invertedColor);
+                }
+            }
+
+            return invertedImage;
+        }
+
     }
 }
