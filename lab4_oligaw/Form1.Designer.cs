@@ -36,6 +36,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonInv = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -119,7 +120,7 @@
             // buttonInv
             // 
             this.buttonInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.buttonInv.Location = new System.Drawing.Point(107, 297);
+            this.buttonInv.Location = new System.Drawing.Point(106, 286);
             this.buttonInv.Name = "buttonInv";
             this.buttonInv.Size = new System.Drawing.Size(134, 55);
             this.buttonInv.TabIndex = 2;
@@ -127,11 +128,23 @@
             this.buttonInv.UseVisualStyleBackColor = false;
             this.buttonInv.Click += new System.EventHandler(this.buttonInv_Click);
             // 
+            // button3
+            // 
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button3.Location = new System.Drawing.Point(106, 364);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(128, 50);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Tylko zielony";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonInv);
@@ -156,6 +169,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonInv;
+        private System.Windows.Forms.Button button3;
     }
 }
 

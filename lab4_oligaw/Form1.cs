@@ -135,8 +135,36 @@ namespace lab4_oligaw
             return invertedImage;
         }
 
+        //green
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("Proszę najpierw wczytać obraz.", "Błąd",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-        
+            Bitmap originalImage = new Bitmap(pictureBox1.Image);
+            Bitmap greenImage = new Bitmap(originalImage.Width, originalImage.Height);
+
+            for (int x = 0; x < originalImage.Width; x++)
+            {
+                for (int y = 0; y < originalImage.Height; y++)
+                {
+                    Color pixelColor = originalImage.GetPixel(x, y);
+
+                    int grayValue = (int)(0.299 * pixelColor.R + 0.587 * pixelColor.G + 0.114 * pixelColor.B);
+
+                    Color greenGrayColor = Color.FromArgb(pixelColor.A, grayValue, pixelColor.G, grayValue);
+                    greenImage.SetPixel(x, y, greenGrayColor);
+                }
+            }
+
+            pictureBox1.Image = greenImage;
+        }
+
+
     }
 }
 
