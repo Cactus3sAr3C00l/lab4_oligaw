@@ -60,7 +60,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(89, 323);
+            this.button2.Location = new System.Drawing.Point(106, 218);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 48);
             this.button2.TabIndex = 2;
@@ -119,7 +119,7 @@
             // buttonInv
             // 
             this.buttonInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.buttonInv.Location = new System.Drawing.Point(32, 314);
+            this.buttonInv.Location = new System.Drawing.Point(107, 297);
             this.buttonInv.Name = "buttonInv";
             this.buttonInv.Size = new System.Drawing.Size(134, 55);
             this.buttonInv.TabIndex = 2;
